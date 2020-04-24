@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +16,7 @@
           <a href="index.html"><div class="logo"> <img src="images/logo.jpg" alt="Logo"><p style="font-family: 'Baloo Paaji 2', cursive; font-size: 50px; margin-top:-15px;">Harsh Restaurant</p></div></a>
            <div class="menu">
                         <ul class="ul">
-                            <li class="li"><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                            <li class="li"><a href="index.php"><i class="fa fa-fw fa-home"></i>Home</a></li>
                             <li class="li"><a href="foodMenu.php"><i class="fa fa-cutlery" aria-hidden="true"></i> Food Menu</a></li>
                             <li class="li"><a href="#" class="active" ><i class="fa fa-pencil" aria-hidden="true"></i>Contact Us</a></li>
                             <li class="li"><a href="login.php"><i class="fa fa-fw fa-user"></i>Login</a></li>

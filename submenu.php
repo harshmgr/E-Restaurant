@@ -82,7 +82,7 @@ echo $dis=ceil($discountPercentage);
 				<a href="https://www.facebook.com/harsh.arya.mgr"><i class="fa fa-facebook"></i></a>
 				<a href="#"><i class="fa fa-twitter"></i></a>
 				<a href="#"><i class="fa fa-instagram"></i></a>
-				<a href="#"><i class="fa fa-github"></i></a>
+				<a href="https://github.com/harshmgr"><i class="fa fa-github"></i></a>
 
 			</div>
 

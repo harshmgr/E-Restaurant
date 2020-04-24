@@ -1,4 +1,8 @@
 <?php 
+session_start();
+if (!$_SESSION['uid']) {
+	header("location:login.php");
+}
 $conn=mysqli_connect('localhost','root','','project');
 if(!$conn){
 	echo 'Not Connected';
@@ -34,7 +38,7 @@ while($row = mysqli_fetch_assoc($result)){
 ">Harsh Restaurant</p></div></a>
 					<div class="menu">
 						<ul class="ul">
-							<li class="li"><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+							<li class="li"><a href="index.php"><i class="fa fa-fw fa-home"></i>Home</a></li>
 							<li class="li"><a href="#" class="active"><i class="fa fa-cutlery" aria-hidden="true"></i> Food Menu</a></li>
 							<li class="li"><a href="ContactUs.php"><i class="fa fa-pencil" aria-hidden="true"></i>Contact Us</a></li>
 							<li class="li"><a href="login.php"><i class="fa fa-fw fa-user"></i>Login</a></li>
@@ -68,7 +72,7 @@ while($row = mysqli_fetch_assoc($result)){
 				<a href="https://www.facebook.com/harsh.arya.mgr"><i class="fa fa-facebook"></i></a>
 				<a href="#"><i class="fa fa-twitter"></i></a>
 				<a href="#"><i class="fa fa-linkedin"></i></a>
-				<a href="#"><i class="fa fa-github"></i></a>
+				<a href="https://github.com/harshmgr"><i class="fa fa-github"></i></a>
 
 			</div>
 

@@ -13,16 +13,14 @@ session_start();
 <body class="login">
 	<header>
         <nav style="width: 100%; border-radius: 0 0 0 0; height: 70px;">
-          <a href="index.html"><div class="logo"> <img src="images/logo.jpg" alt="Logo"><p style="font-family: 'Baloo Paaji 2', cursive; font-size: 50px; margin-top:-15px;
+          <a href="index.php"><div class="logo"> <img src="images/logo.jpg" alt="Logo"><p style="font-family: 'Baloo Paaji 2', cursive; font-size: 50px; margin-top:-15px;
 ">Harsh Restaurant</p></div></a>
            <div class="menu">
                         <ul class="ul">
-                            <li class="li"><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
-                            <li class="li"><a href="foodMenu.php"><i class="fa fa-cutlery" aria-hidden="true"></i> Food Menu</a></li>
+                            <li class="li"><a href="index.php"><i class="fa fa-fw fa-home"></i>Home</a></li>                         
                             <li class="li"><a href="ContactUs.php"><i class="fa fa-pencil" aria-hidden="true"></i>Contact Us</a></li>
                             <li class="li"><a href="login.php" class="active"><i class="fa fa-fw fa-user"></i>Login</a></li>
-                            <a href="cart.php" id="cart" title="Your Cart" ><img src="cart-icon.png" height="40px;"></a>
-                            <a href="user.php" id="user"><i class="fa fa-user-circle fa-3x"aria-hidden="true" title="user"></i></a>
+                            </i></a>
                         </ul>
                     </div>
         </nav>
@@ -43,7 +41,7 @@ if(isset($_POST['query'])){
 		$_SESSION["name"] = $row["fname"];
 		$ip_add = getenv("REMOTE_ADDR");
 //if user is login from page we will send login_success
-			echo "login_success";
+			echo "login Success";
 			header("location:profile.php");
 		}else{
 			?>
