@@ -1,4 +1,5 @@
 <?php 
+session_start();
     ?>
 <!DOCTYPE html>
 
@@ -17,12 +18,12 @@
 ">Harsh Restaurant</p></div></a>
            <div class="menu">
                         <ul class="ul">
-                            <li class="li"><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                            <li class="li"><a href="index.php"><i class="fa fa-fw fa-home"></i>Home</a></li>
                             <li class="li"><a href="foodMenu.php"><i class="fa fa-cutlery" aria-hidden="true"></i> Food Menu</a></li>
                             <li class="li"><a href="ContactUs.php"><i class="fa fa-pencil" aria-hidden="true"></i>Contact Us</a></li>
                             <li class="li"><a href="login.php"><i class="fa fa-fw fa-user"></i>Login</a></li>
                             <a href="cart.php" id="cart" title="Your Cart" ><img src="cart-icon.png" height="40px;"></a>
-                            <a href="user.php" id="user"><i class="fa fa-user-circle fa-3x"aria-hidden="true" title="user">
+                            <a href="user.php" id="user"><i class="fa fa-user-circle fa-3x"aria-hidden="true" title="<?php echo $_SESSION['name'];?>">
                             </i></a>
                         </ul>
                     </div>

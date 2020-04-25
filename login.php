@@ -1,5 +1,11 @@
 <?php
 session_start();
+if ($_SESSION['uid']) {
+	echo "<script> alert('You Must Logout First. We are redirecting to logout Page');</script>";
+	echo "<script>setTimeout(\"location.href = 'logout.php';\",1500);</script>";
+	
+header("location:logout.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,8 +45,6 @@ if(isset($_POST['query'])){
 		$row = mysqli_fetch_array($query);
 		$_SESSION["uid"] = $row["reg_id"];
 		$_SESSION["name"] = $row["fname"];
-		$ip_add = getenv("REMOTE_ADDR");
-//if user is login from page we will send login_success
 			echo "login Success";
 			header("location:profile.php");
 		}else{

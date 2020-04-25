@@ -17,11 +17,11 @@
            <div class="menu">
                         <ul class="ul">
                             <li class="li"><a href="index.php"><i class="fa fa-fw fa-home"></i>Home</a></li>
-                            <li class="li"><a href="foodMenu.php"><i class="fa fa-cutlery" aria-hidden="true"></i> Food Menu</a></li>
+                            <?php if(!empty($_SESSION['uid'])){ echo "<li class='li'><a href='foodMenu.php'><i class='fa fa-cutlery' aria-hidden='true'></i> Food Menu</a></li>";}?>
                             <li class="li"><a href="#" class="active" ><i class="fa fa-pencil" aria-hidden="true"></i>Contact Us</a></li>
                             <li class="li"><a href="login.php"><i class="fa fa-fw fa-user"></i>Login</a></li>
-                            <a href="cart.php" id="cart" title="Your Cart" ><img src="cart-icon.png" height="40px;"></a>
-                            <a href="user.php" id="user"><i class="fa fa-user-circle fa-3x"aria-hidden="true" title="user"></i></a>
+                            <?php if(!empty($_SESSION['uid'])){ echo "<a href='cart.php' id='cart' title='Your Cart' ><img src='cart-icon.png' height='40px;''></a>
+                            <a href='user.php' id='user'><i class='fa fa-user-circle fa-3x'aria-hidden='true' title='user'></i></a>";} ?>
                         </ul>
                     </div>
         </nav>
@@ -63,6 +63,7 @@ if(isset($_GET['query'])){
 
                 	</form>
                 </div>
+
            <script type="text/javascript">
            		function validate(){
            			var name=document.forms["box1"]["nam"];
@@ -87,7 +88,6 @@ if(isset($_GET['query'])){
            			}
            			return true;
            		}
-           </script>
-            
+           </script> 
 </body>
 </html>
