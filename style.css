@@ -213,17 +213,15 @@ nav .logo p{
     height: 1000px;
     background-color: rgba(255,255,255,0.6);
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
-    transform: translate(-50%,-20%);
-    border-radius: 12%;
+    transform: translate(-50%,-10%);
     color:rgb(15,25,100);
     text-align: center;
 }
 .register .reg #regi{
-     width:250px;
+    width:250px;
     height: 30px;
-    border-radius: 10px;
     margin: 10px auto;
 }
 .register .reg #regi input{
@@ -233,10 +231,10 @@ nav .logo p{
     width:80%;
 }
 .register .reg #regi h1{
-    padding: 20px;
-    color: #4C4C4C;
+    padding: 10px;
+    color: #ffff;
     font-size: 40px;
-    text-decoration: underline;
+    background-color: #03980493;
 }
 button{
     width: 260px;

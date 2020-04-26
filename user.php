@@ -49,24 +49,17 @@ while($row = mysqli_fetch_assoc($result)){
 <div class="container-fluid border border-primary" style="width: 400px; background-color: rgba(12,212,32,0.5); color: white; transform: translate(550px,15px);">
 
     <h5 class="page-header" style="background-color: #aabbcc; text-align: center; font-size: 30px;">UPDATE PROFILE</h5>
-
-    <!--Card content-->
     <div>
-
-        <!-- Form -->
         <form class="text-center" style="color: #757575; display: grid; grid-gap: 10px; text-align: center;" action="update.php" method="GET">
 
             <div class="form-row">
                 <div class="col">
-                    <!-- First name -->
                     <div style="padding: 0px;">
                         <label>First name</label><br>
                         <input type="text" id="materialRegisterFormFirstName" name="fname"  class="form-control" value="<?php echo $row['fname']?>" required>
-                        
                     </div>
                 </div>
                 <div class="col">
-                    <!-- Last name -->
                     <div class="md-form">
                         <label>Last name</label><br>
                         <input type="text" id="materialRegisterFormLastName" name="lname"  class="form-control" value="<?php echo $row['lname'] ?>" required>
@@ -74,22 +67,16 @@ while($row = mysqli_fetch_assoc($result)){
                     </div>
                 </div>
             </div>
-
-            <!-- E-mail -->
             <div class="md-form mt-0">
                 <label>E-mail</label><br>
                 <input type="email" id="materialRegisterFormEmail" class="form-control" name="mail" value="<?php echo $row['email_id']?>" required>
                 
             </div>
-
-            <!-- Password -->
             <div class="md-form">
                  <label>Registration ID</label><br>
                 <input type="text" id="materialRegisterFormPassword" name="reg_id" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" value="<?php echo $row['reg_id']?>" readonly>
                
             </div>
-
-            <!-- Phone number -->
             <div class="md-form">
                 <label>Phone number</label><br>
                 <input type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="mobile" value="<?php echo $row['mobile'] ?>" required>
@@ -122,8 +109,8 @@ while($row = mysqli_fetch_assoc($result)){
             <div class="footer-right">
 
                 <a href="https://www.facebook.com/harsh.arya.mgr"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://twitter.com/harsh_mgr"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/harsh.mgr/"><i class="fa fa-instagram"></i></a>
                 <a href="https://github.com/harshmgr"><i class="fa fa-github"></i></a>
 
             </div>
@@ -131,17 +118,17 @@ while($row = mysqli_fetch_assoc($result)){
             <div class="footer-left">
 
                 <p class="footer-links">
-                    <a class="link-1" href="#">Home</a>
+                    <a class="link-1" href="index.php">Home</a>
 
-                    <a href="#">Menu</a>
+                    <a href="foodMenu.php">Menu</a>
 
-                    <a href="#">Login</a>
+                    <a href="login.php">Login</a>
 
-                    <a href="#">Register</a>
+                    <a href="register.php">Register</a>
 
-                    <a href="#">Faq</a>
+                    <a href="contactUs.php">Contact Us</a>
 
-                    <a href="#">Contact Us</a>
+                    <a href="aboutUs.php">About Us</a>
                 </p>
 
                 <p style="text-align: center; font-size: 30px;">Harsh Kumar &copy; 2019-21</p>

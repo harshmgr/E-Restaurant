@@ -3,9 +3,8 @@ session_start();
 if ($_SESSION['uid']) {
 	echo "<script> alert('You Must Logout First. We are redirecting to logout Page');</script>";
 	echo "<script>setTimeout(\"location.href = 'logout.php';\",1500);</script>";
-	
-header("location:logout.php");
 }
+elseif (empty($_SESSION['uid'])) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -79,3 +78,6 @@ if(isset($_POST['query'])){
     </script>
 </body>
 </html>
+<?php
+}
+?>

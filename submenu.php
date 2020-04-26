@@ -1,9 +1,20 @@
 <?php 
 session_start();
+if(!isset($_SESSION['cart'])){
+		$_SESSION['cart'] = array();
+	}
+
+	//unset qunatity
+	unset($_SESSION['qty_array']);
+
+if (empty($_SESSION['uid'])) {
+	header("location:login.php");
+}
 $conn=mysqli_connect('localhost','root','','project');
 if(!$conn){
 	echo 'Not Connected';
 }
+
 /*$result = mysqli_query($conn,"SELECT * FROM menu");
 while($row = mysqli_fetch_assoc($result)){
 	echo "<div class='product_wrapper'>
@@ -39,7 +50,7 @@ while($row = mysqli_fetch_assoc($result)){
 							<li class="li"><a href="foodMenu.php"><i class="fa fa-cutlery" aria-hidden="true"></i> Food Menu</a></li>
 							<li class="li"><a href="ContactUs.php"><i class="fa fa-pencil" aria-hidden="true"></i>Contact Us</a></li>
 							<li class="li"><a href="login.php"><i class="fa fa-fw fa-user"></i>Login</a></li>
-							<a href="cart.php" id="cart" title="Your Cart" ><img src="cart-icon.png" height="40px;"></a>
+							<a href="cart.php" id="cart" title="<?php echo count($_SESSION['cart']); ?>" ><img src="cart-icon.png" height="40px;"></a>
 							<a href="user.php" id="user"><i class="fa fa-user-circle fa-3x"aria-hidden="true" title="<?php echo $_SESSION['name'];?>"></i></a>
 						</ul>
 					</div>
@@ -50,6 +61,17 @@ while($row = mysqli_fetch_assoc($result)){
 			<p id="serve">We Serve delicious world class dishes to our Customer</p>
 
 <div class="contai" style="background-color: #E2EFFF;">
+	<?php
+		if(isset($_SESSION['message'])){
+			?>			
+			<script>
+				var userName = "<?php echo $_SESSION['message'] ?>";
+				alert(userName);
+				</script>
+			<?php
+			unset($_SESSION['message']);
+		}
+		?>
 	<?php
 		$mid=$_GET['mid'];
 		//if(isset($_GET['click'])){
@@ -72,41 +94,41 @@ $discount = $original-$sold_price;
 $discountPercentage=($discount/$original)*100;
 echo $dis=ceil($discountPercentage);
 ?>% off</p></div> 
-  <p><button style="margin-bottom: 0px;">ORDER NOW</button></p>
+  <a href="add_cart.php?id=<?php echo $row['pid'];?>&mid=<?php echo $mid;?>" style="text-decoration: none;"><button>Add to Cart</button></a>
 </div>
 <?php } ?>
 </div>
 <footer class="footer-distributed">
 
-			<div class="footer-right">
+            <div class="footer-right">
 
-				<a href="https://www.facebook.com/harsh.arya.mgr"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-instagram"></i></a>
-				<a href="https://github.com/harshmgr"><i class="fa fa-github"></i></a>
+                <a href="https://www.facebook.com/harsh.arya.mgr"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/harsh_mgr"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/harsh.mgr/"><i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/harshmgr"><i class="fa fa-github"></i></a>
 
-			</div>
+            </div>
 
-			<div class="footer-left">
+            <div class="footer-left">
 
-				<p class="footer-links">
-					<a class="link-1" href="#">Home</a>
+                <p class="footer-links">
+                    <a class="link-1" href="index.php">Home</a>
 
-					<a href="#">Menu</a>
+                    <a href="foodMenu.php">Menu</a>
 
-					<a href="#">Login</a>
+                    <a href="login.php">Login</a>
 
-					<a href="#">Register</a>
+                    <a href="register.php">Register</a>
 
-					<a href="#">Faq</a>
+                    <a href="contactUs.php">Contact Us</a>
 
-					<a href="#">Contact Us</a>
-				</p>
+                    <a href="aboutUs.php">About Us</a>
+                </p>
 
-				<p style="text-align: center; font-size: 30px;">Harsh Kumar &copy; 2019-21</p>
-			</div>
+                <p style="text-align: center; font-size: 30px;">Harsh Kumar &copy; 2019-21</p>
+            </div>
 
-		</footer>
+        </footer>
 	</div>
 </body>
 </html>

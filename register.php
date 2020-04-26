@@ -1,4 +1,9 @@
 <?php
+session_start();
+if($_SESSION["uid"]){
+unset($_SESSION["uid"]);
+unset($_SESSION["name"]);
+}
 if(isset($_POST['submit'])){
 	$fname=$_POST['fname'];
 	$lname=$_POST['lname'];
@@ -16,7 +21,8 @@ if($conn)
 	echo "Data Inserted";
 	}
 	else{
-		echo "Error".mysqli_error($conn);
+		echo "<script>alert('User already registered with same mobile number');</script>";
+
 	}
 }
 else{
@@ -28,20 +34,25 @@ else{
 <html>
 <head>
 	<title>Registration</title>
-	<link rel=stylesheet href="style.css">
+	<link rel=stylesheet href="style.css?version=51">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css?version=51">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="register">
 	<header>
-        <nav>
-          <a href="HomePage.html"><div class="logo"> <img src="C:\Users\Harsh\Desktop\Mini Project\images\logo.jpg" alt="Logo"><p>Harsh Restaurant</p></div></a>
-            <div class="menu">
-            <ul>
-                <li><a href="HomePage.html">Home</a></li>
-                <li><a href="#">Food Menu</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="ContactUs.php">Contact Us</a></li>
-            </ul>
-        </div>
+        <nav style="width: 100%; border-radius: 0 0 0 0; height: 70px;">
+          <a href="index.html"><div class="logo"> <img src="images/logo.jpg" alt="Logo"><p style="font-family: 'Baloo Paaji 2', cursive; font-size: 50px; margin-top:-15px;">Harsh Restaurant</p></div></a>
+           <div class="menu">
+                        <ul class="ul">
+                            <li class="li"><a href="index.php"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                            <?php if(!empty($_SESSION['uid'])){ echo "<li class='li'><a href='foodMenu.php'><i class='fa fa-cutlery' aria-hidden='true'></i> Food Menu</a></li>";}?>
+                            <li class="li"><a href="#" class="active" ><i class="fa fa-pencil" aria-hidden="true"></i>Contact Us</a></li>
+                            <li class="li"><a href="login.php"><i class="fa fa-fw fa-user"></i>Login</a></li>
+                            <?php if(!empty($_SESSION['uid'])){ echo "<a href='cart.php' id='cart' title='Your Cart' ><img src='cart-icon.png' height='40px;''></a>
+                            <a href='user.php' id='user'><i class='fa fa-user-circle fa-3x'aria-hidden='true' title='user'></i></a>";} ?>
+                        </ul>
+                    </div>
         </nav>
     </header>
     <div class="reg">
@@ -66,7 +77,7 @@ else{
     		  <label><input type="radio" name="gender" value="male" checked>Male
     		  <label><input type="radio" name="gender" value="female">Female<br>
     		</div>
-            <input type="submit" id="submit" name="submit"><br>
+            <button type="submit" id="submit" name="submit">Register</button>
     	</form>
     </div>
     <script type="text/javascript">
