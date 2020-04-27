@@ -1,16 +1,16 @@
 <?php
 session_start();
+error_reporting(E_PARSE);
 if ($_SESSION['uid']) {
 	echo "<script> alert('You Must Logout First. We are redirecting to logout Page');</script>";
 	echo "<script>setTimeout(\"location.href = 'logout.php';\",1500);</script>";
 }
-elseif (empty($_SESSION['uid'])) {
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Login</title>
-	<link rel=stylesheet href="style.css">
+	<link rel=stylesheet href="style.css?version=51?">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css?version=51">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -47,8 +47,8 @@ if(isset($_POST['query'])){
 			echo "login Success";
 			header("location:profile.php");
 		}else{
+            echo "<script>alert('UserName or Password is Incorrect. Please check and login again');</script>";
 			?>
-    	<span style="color:black; font-size: 26px; ">Username or Password is invalid</span>
 		<?php
 	}
 
@@ -78,6 +78,3 @@ if(isset($_POST['query'])){
     </script>
 </body>
 </html>
-<?php
-}
-?>

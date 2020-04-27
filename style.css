@@ -133,7 +133,7 @@ nav .logo p{
     font-family: big john;
 }
 .menu ul li:hover{
-	background: linear-gradient(0deg, rgba(12,0,2,1) 0%, rgba(253,121,45,0.9668242296918768) 100%);
+	background: linear-gradient(0deg, rgba(12,0,2,1) 0%, #7b7b7b 90%);
 }
 
 
@@ -283,7 +283,7 @@ button{
     top: 30%;
     left: 50%;
     transform: translate(-50%,-20%);
-    border-radius: 12%;
+    border-radius: 7%;
     color:rgb(15,25,100);
     text-align: center;
 }

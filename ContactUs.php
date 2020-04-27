@@ -5,7 +5,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel=stylesheet href="style.css">
+	<link rel=stylesheet href="style.css?version=50;">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css?version=51">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -52,7 +52,7 @@ if(isset($_GET['query'])){
 </div>
                 <div class="con">
                 	<form class="box" id="box1" action="ContactUs.php" onsubmit="return validate()">
-                		<h1>Contact us</h1>
+                		<h1>CONTACT US</h1>
                 		<h3>If you want more information fill in this form. You will be contacted as soon as possible.<br>
 							Please fill in all required fields.</h3>
                 		<label>Your Name*&nbsp;</label><input type="text" name="nam"><br>

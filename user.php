@@ -13,19 +13,24 @@ while($row = mysqli_fetch_assoc($result)){
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title><?php echo $_SESSION['name'];?> Profile</title>
     <link rel=stylesheet href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css?version=51">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
     input{
-        width: 200px;
+        width: 270px;
         text-align: center;
-        border-radius: 2px;
+        border-radius: 10px;
+        height: 30px;
+        font-size: 20px;
     }
     label{
         color: #fff;
+    }
+    .md-form{
+        margin-top: 10px;
     }
     </style>
 </head>
@@ -56,36 +61,34 @@ while($row = mysqli_fetch_assoc($result)){
                 <div class="col">
                     <div style="padding: 0px;">
                         <label>First name</label><br>
-                        <input type="text" id="materialRegisterFormFirstName" name="fname"  class="form-control" value="<?php echo $row['fname']?>" required>
+                        <input type="text" name="fname"  value="<?php echo $row['fname']?>" required>
                     </div>
                 </div>
-                <div class="col">
                     <div class="md-form">
                         <label>Last name</label><br>
-                        <input type="text" id="materialRegisterFormLastName" name="lname"  class="form-control" value="<?php echo $row['lname'] ?>" required>
+                        <input type="text"  name="lname" value="<?php echo $row['lname'] ?>" required>
                         
                     </div>
-                </div>
             </div>
-            <div class="md-form mt-0">
+            <div class="md-form">
                 <label>E-mail</label><br>
-                <input type="email" id="materialRegisterFormEmail" class="form-control" name="mail" value="<?php echo $row['email_id']?>" required>
+                <input type="email"  name="mail" value="<?php echo $row['email_id']?>" required>
                 
             </div>
             <div class="md-form">
                  <label>Registration ID</label><br>
-                <input type="text" id="materialRegisterFormPassword" name="reg_id" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" value="<?php echo $row['reg_id']?>" readonly>
+                <input type="text" name="reg_id" value="<?php echo $row['reg_id']?>" readonly>
                
             </div>
             <div class="md-form">
                 <label>Phone number</label><br>
-                <input type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="mobile" value="<?php echo $row['mobile'] ?>" required>
+                <input type="text" name="mobile" value="<?php echo $row['mobile'] ?>" required>
                 
             </div>
 
             <div class="md-form">
                  <label>DATE OF BIRTH</label><br>
-                <input type="date" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="dob" value="<?php echo $row['dob']?>" required>
+                <input type="date" name="dob" value="<?php echo $row['dob']?>" required>
                
             </div>
             
@@ -93,17 +96,18 @@ while($row = mysqli_fetch_assoc($result)){
 
             <div class="md-form">
                  <label>GENDER</label><br>
-                <input type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="gender" value="<?php echo $row['gender'] ?>" required>
+                <input type="text" name="gender" value="<?php echo $row['gender'] ?>" required>
                
             </div>
             <button class="btn btn-primary" type="submit">UPDATE</button>
         </form>
-        <a href="logout.php" style="text-decoration: none;"><button style="margin-top: 0px;" class="btn btn-primary">Logout</button></a>
+        <a href="logout.php" style="text-decoration: none;"><button style="margin-top: 0px;">Logout</button></a>
 
 </script>
     </div>
 
 </div>
+<hr>
 <footer class="footer-distributed">
 
             <div class="footer-right">
