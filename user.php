@@ -31,10 +31,11 @@ while($row = mysqli_fetch_assoc($result)){
     }
     .md-form{
         margin-top: 10px;
+	
     }
     </style>
 </head>
-<body style="background: linear-gradient(to right, #8f94fb, #4e54e8);">
+<body style="background: url(user_bg.jpg); background-size:cover;">
     <header>
         <nav style="width: 100%; border-radius: 0 0 0 0; height: 50px;">
           <a href="index.php"><div class="logo"> <img src="images/logo.jpg" alt="Logo"><p style="font-family: 'Baloo Paaji 2', cursive; font-size: 50px; margin-top:-15px;
@@ -51,14 +52,14 @@ while($row = mysqli_fetch_assoc($result)){
                     </div>
         </nav>
     </header>
-<div class="container-fluid border border-primary" style="width: 400px; background-color: rgba(12,212,32,0.5); color: white; transform: translate(550px,15px);">
+<div style="width: 400px; background-color: rgba(10,110,132,0.9); color: white; transform: translate(550px,15px); border-radius: 7px;">
 
-    <h5 class="page-header" style="background-color: #aabbcc; text-align: center; font-size: 30px;">UPDATE PROFILE</h5>
+    <h5 style="background-color: #aaaa1c; text-align: center; font-size: 30px; color:#fff;">UPDATE PROFILE</h5>
     <div>
         <form class="text-center" style="color: #757575; display: grid; grid-gap: 10px; text-align: center;" action="update.php" method="GET">
 
-            <div class="form-row">
-                <div class="col">
+            <div>
+                <div>
                     <div style="padding: 0px;">
                         <label>First name</label><br>
                         <input type="text" name="fname"  value="<?php echo $row['fname']?>" required>
@@ -76,7 +77,7 @@ while($row = mysqli_fetch_assoc($result)){
                 
             </div>
             <div class="md-form">
-                 <label>Registration ID</label><br>
+                 <label>Registration Id</label><br>
                 <input type="text" name="reg_id" value="<?php echo $row['reg_id']?>" readonly>
                
             </div>
@@ -87,7 +88,7 @@ while($row = mysqli_fetch_assoc($result)){
             </div>
 
             <div class="md-form">
-                 <label>DATE OF BIRTH</label><br>
+                 <label>Date of Birth</label><br>
                 <input type="date" name="dob" value="<?php echo $row['dob']?>" required>
                
             </div>
@@ -95,7 +96,7 @@ while($row = mysqli_fetch_assoc($result)){
 
 
             <div class="md-form">
-                 <label>GENDER</label><br>
+                 <label>Gender</label><br>
                 <input type="text" name="gender" value="<?php echo $row['gender'] ?>" required>
                
             </div>
@@ -107,7 +108,7 @@ while($row = mysqli_fetch_assoc($result)){
     </div>
 
 </div>
-<hr>
+<hr style="width:5px;">
 <footer class="footer-distributed">
 
             <div class="footer-right">

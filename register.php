@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(E_PARSE);
 if($_SESSION["uid"]){
 unset($_SESSION["uid"]);
 unset($_SESSION["name"]);

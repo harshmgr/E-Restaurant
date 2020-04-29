@@ -3,8 +3,10 @@ session_start();
 error_reporting(E_PARSE);
 if ($_SESSION['uid']) {
 	echo "<script> alert('You Must Logout First. We are redirecting to logout Page');</script>";
-	echo "<script>setTimeout(\"location.href = 'logout.php';\",1500);</script>";
+	echo "<script>setTimeout(\"location.href = 'logout.php';\",1000);</script>";
 }
+else if(empty($_SESSION['uid'])){
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -78,3 +80,6 @@ if(isset($_POST['query'])){
     </script>
 </body>
 </html>
+<?php
+}
+?>
