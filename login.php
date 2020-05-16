@@ -58,7 +58,7 @@ if(isset($_POST['query'])){
 ?>
     <form class="form1" id="form1" action="login.php" method="POST" onsubmit="return validForm()">
     	<h1 id="log">LOGIN</h1>
-    	<input type="text" name="user" id="ser" placeholder="Username" class="box"><br> <!-- harsh -->
+    	<input type="email" name="user" id="ser" placeholder="Username" class="box"><br> <!-- harsh -->
     	<input type="password" name="pass" id="pass" placeholder="Password" class="box"><br>
     	<button value="Submit" name="query">Submit</button>
     </form>

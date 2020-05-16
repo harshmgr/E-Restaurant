@@ -60,9 +60,9 @@ else{
     	<form id="regi" method="POST" onsubmit="return validation()" action="register.php">
     		<h1>Registration Form</h1>
     		<label>First Name:</label>
-    		<input type="text" name="fname" class="box"><br><br>
+    		<input type="text" name="fname" pattern="[A-Za-z]+" class="box"><br><br>
     		<label>Last Name:</label>
-    		<input type="text" name="lname" class="box"><br><br>
+    		<input type="text" name="lname" pattern="[A-Za-z]+" class="box"><br><br>
     		<label>E-mail Id:</label>
     		<input type="email" name="mail" class="box"><br><br>
     		<label>Password:</label>
