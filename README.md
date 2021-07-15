@@ -1,17 +1,21 @@
 # Online Examination Application
 
-#### The Online Examination System will permit to take and give online examination and maintaining master information and generating various reports of test. The main users of the project are Student and System Administrator.
+#### Online Restaurant Management system will be used for ordering food from restaurant or food co-operative through a web page.
 [![GitHub repo size](https://img.shields.io/github/repo-size/harshmgr/E-Restaurant)](https://github.com/harshmgr/E-Restaurant) [![GitHub license](https://img.shields.io/github/license/harshmgr/E-Restaurant)](https://github.com/harshmgr/E-Restaruant/blob/master/LICENSE/)
 
 ## Abstract
 
-![Online Examination Application](https://img.shields.io/badge/Examination-Application-lightgrey)
-![MCA Project](https://img.shields.io/badge/MCA-Project-blue)
+![Online Examination Application](https://img.shields.io/badge/Online-Restaurrant-lightpink)
+![MCA Project](https://img.shields.io/badge/MCA-2nd_Sem_Project-blue)
 
-Online examination helps students of Schools /Colleges to offer a quick and easy way to appear for the exam. It also
-provides the results immediately after the exam. The students has to enter valid user id and password to attend the
-exam. This examination project provides time limit to finish the exam. The user can see their results after completing
-the exam.
+Online Restaurant Management system will be used for ordering food from a 
+restaurant or food co-operative through a web page. Much like ordering 
+consumer goods online, many of these allow customers to keep accounts with 
+them in order to make frequent ordering convenient. 
+A customer will select the favorite food item usually filtered via type of 
+cuisine and choose from available items and choose delivery or pick-up after 
+the successful transaction.
+
 
 [![PPT](https://img.shields.io/static/v1.svg?label=Project&message=PPT&logo=microsoft-powerpoint&style=social)](https://github.com/harshmgr/Examination-Application/blob/master/Project%20Presentation.pdf) [![report](https://img.shields.io/static/v1.svg?label=Project&message=Report&logo=microsoft-word&style=social)]()
 
