@@ -1,7 +1,7 @@
 # Online Examination Application
 
 #### The Online Examination System will permit to take and give online examination and maintaining master information and generating various reports of test. The main users of the project are Student and System Administrator.
-[![GitHub repo size](https://img.shields.io/github/repo-size/harshmgr/Examination-Application)](https://github.com/harshmgr/Examination-Application) [![GitHub license](https://img.shields.io/github/license/harshmgr/Examination-Application)](https://github.com/harshmgr/Examination-Application/blob/master/LICENSE/)
+[![GitHub repo size](https://img.shields.io/github/repo-size/harshmgr/E-Restaurant)](https://github.com/harshmgr/E-Restaurant) [![GitHub license](https://img.shields.io/github/license/harshmgr/Examination-Application)](https://github.com/harshmgr/Examination-Application/blob/master/LICENSE/)
 
 ## Abstract
 
