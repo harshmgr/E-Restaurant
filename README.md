@@ -1,6 +1,6 @@
-# Online Examination Application
+# Online Restaurant Application
 
-#### Online Restaurant Management system will be used for ordering food from restaurant or food co-operative through a web page.
+#### Online Restaurant system will be used for ordering food from restaurant or food co-operative through a web page.
 [![GitHub repo size](https://img.shields.io/github/repo-size/harshmgr/E-Restaurant)](https://github.com/harshmgr/E-Restaurant) [![GitHub license](https://img.shields.io/github/license/harshmgr/E-Restaurant)](https://github.com/harshmgr/E-Restaruant/blob/master/LICENSE/)
 
 ## Abstract
@@ -8,7 +8,7 @@
 ![Online Examination Application](https://img.shields.io/badge/Online-Restaurrant-lightpink)
 ![MCA Project](https://img.shields.io/badge/MCA-2nd_Sem_Project-blue)
 
-Online Restaurant Management system will be used for ordering food from a 
+E-Restaurant System will be used for ordering food from a 
 restaurant or food co-operative through a web page. Much like ordering 
 consumer goods online, many of these allow customers to keep accounts with 
 them in order to make frequent ordering convenient. 
@@ -17,7 +17,7 @@ cuisine and choose from available items and choose delivery or pick-up after
 the successful transaction.
 
 
-[![PPT](https://img.shields.io/static/v1.svg?label=Project&message=PPT&logo=microsoft-powerpoint&style=social)](https://github.com/harshmgr/Examination-Application/blob/master/Project%20Presentation.pdf) [![report](https://img.shields.io/static/v1.svg?label=Project&message=Report&logo=microsoft-word&style=social)]()
+[![PPT](https://img.shields.io/static/v1.svg?label=Project&message=PPT&logo=microsoft-powerpoint&style=social)](https://github.com/harshmgr/Examination-Application/blob/master/Project%20Presentation.pdf)
 
 > **To download the presentation, [click here](https://github.com/harshmgr/Examination-Application/blob/master/Presentation.pptx).**
 
